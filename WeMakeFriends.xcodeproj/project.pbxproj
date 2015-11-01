@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C70C91BE001CC00C83AE2 /* Main.storyboard */; };
+		670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CC1BE0032600C83AE2 /* FirstViewController.m */; };
+		670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CF1BE0039C00C83AE2 /* SecondViewController.m */; };
+		670C70D31BE003CE00C83AE2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70D21BE003CE00C83AE2 /* ListTableViewController.m */; };
+		670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */; };
+		670C70DC1BE00DA900C83AE2 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70DB1BE00DA900C83AE2 /* Users.m */; };
+		672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672929971BE3B3FF00B59F45 /* MapKit.framework */; };
+		679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679C83411BE46F0F0066CBF5 /* FriendViewController.m */; };
+		67BD6DCD1BDA982200A3AB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCC1BDA982200A3AB3D /* main.m */; };
+		67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */; };
+		67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD71BDA982200A3AB3D /* Assets.xcassets */; };
+		67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */; };
+		67BD6DE61BDA982200A3AB3D /* WeMakeFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */; };
+		67BD6DF11BDA982200A3AB3D /* WeMakeFriendsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67BD6DE21BDA982200A3AB3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67BD6DC01BDA982200A3AB3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67BD6DC71BDA982200A3AB3D;
+			remoteInfo = WeMakeFriends;
+		};
+		67BD6DED1BDA982200A3AB3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67BD6DC01BDA982200A3AB3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67BD6DC71BDA982200A3AB3D;
+			remoteInfo = WeMakeFriends;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		670C70C91BE001CC00C83AE2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		670C70CB1BE0032600C83AE2 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		670C70CC1BE0032600C83AE2 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		670C70CE1BE0039C00C83AE2 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		670C70CF1BE0039C00C83AE2 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		670C70D11BE003CE00C83AE2 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		670C70D21BE003CE00C83AE2 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		670C70DA1BE00DA900C83AE2 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		670C70DB1BE00DA900C83AE2 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
+		672929971BE3B3FF00B59F45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		679C83401BE46F0F0066CBF5 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendViewController.h; path = ../FriendViewController.h; sourceTree = "<group>"; };
+		679C83411BE46F0F0066CBF5 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendViewController.m; path = ../FriendViewController.m; sourceTree = "<group>"; };
+		67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMakeFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BD6DCC1BDA982200A3AB3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		67BD6DD71BDA982200A3AB3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67BD6DDA1BDA982200A3AB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67BD6DDC1BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeFriendsTests.m; sourceTree = "<group>"; };
+		67BD6DE71BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeFriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeFriendsUITests.m; sourceTree = "<group>"; };
+		67BD6DF21BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67BD6DC51BDA982200A3AB3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DDE1BDA982200A3AB3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DE91BDA982200A3AB3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67BD6DBF1BDA982200A3AB3D = {
+			isa = PBXGroup;
+			children = (
+				672929971BE3B3FF00B59F45 /* MapKit.framework */,
+				67BD6DCA1BDA982200A3AB3D /* WeMakeFriends */,
+				67BD6DE41BDA982200A3AB3D /* WeMakeFriendsTests */,
+				67BD6DEF1BDA982200A3AB3D /* WeMakeFriendsUITests */,
+				67BD6DC91BDA982200A3AB3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67BD6DC91BDA982200A3AB3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */,
+				67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */,
+				67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67BD6DCA1BDA982200A3AB3D /* WeMakeFriends */ = {
+			isa = PBXGroup;
+			children = (
+				67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */,
+				67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */,
+				670C70C91BE001CC00C83AE2 /* Main.storyboard */,
+				670C70DA1BE00DA900C83AE2 /* Users.h */,
+				670C70DB1BE00DA900C83AE2 /* Users.m */,
+				679C83401BE46F0F0066CBF5 /* FriendViewController.h */,
+				679C83411BE46F0F0066CBF5 /* FriendViewController.m */,
+				670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */,
+				670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */,
+				670C70D11BE003CE00C83AE2 /* ListTableViewController.h */,
+				670C70D21BE003CE00C83AE2 /* ListTableViewController.m */,
+				670C70CE1BE0039C00C83AE2 /* SecondViewController.h */,
+				670C70CF1BE0039C00C83AE2 /* SecondViewController.m */,
+				670C70CB1BE0032600C83AE2 /* FirstViewController.h */,
+				670C70CC1BE0032600C83AE2 /* FirstViewController.m */,
+				67BD6DD71BDA982200A3AB3D /* Assets.xcassets */,
+				67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */,
+				67BD6DDC1BDA982200A3AB3D /* Info.plist */,
+				67BD6DCB1BDA982200A3AB3D /* Supporting Files */,
+			);
+			path = WeMakeFriends;
+			sourceTree = "<group>";
+		};
+		67BD6DCB1BDA982200A3AB3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67BD6DCC1BDA982200A3AB3D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67BD6DE41BDA982200A3AB3D /* WeMakeFriendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */,
+				67BD6DE71BDA982200A3AB3D /* Info.plist */,
+			);
+			path = WeMakeFriendsTests;
+			sourceTree = "<group>";
+		};
+		67BD6DEF1BDA982200A3AB3D /* WeMakeFriendsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */,
+				67BD6DF21BDA982200A3AB3D /* Info.plist */,
+			);
+			path = WeMakeFriendsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67BD6DC71BDA982200A3AB3D /* WeMakeFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67BD6DF51BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriends" */;
+			buildPhases = (
+				67BD6DC41BDA982200A3AB3D /* Sources */,
+				67BD6DC51BDA982200A3AB3D /* Frameworks */,
+				67BD6DC61BDA982200A3AB3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeMakeFriends;
+			productName = WeMakeFriends;
+			productReference = 67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67BD6DE01BDA982200A3AB3D /* WeMakeFriendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67BD6DF81BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsTests" */;
+			buildPhases = (
+				67BD6DDD1BDA982200A3AB3D /* Sources */,
+				67BD6DDE1BDA982200A3AB3D /* Frameworks */,
+				67BD6DDF1BDA982200A3AB3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67BD6DE31BDA982200A3AB3D /* PBXTargetDependency */,
+			);
+			name = WeMakeFriendsTests;
+			productName = WeMakeFriendsTests;
+			productReference = 67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67BD6DEB1BDA982200A3AB3D /* WeMakeFriendsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67BD6DFB1BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsUITests" */;
+			buildPhases = (
+				67BD6DE81BDA982200A3AB3D /* Sources */,
+				67BD6DE91BDA982200A3AB3D /* Frameworks */,
+				67BD6DEA1BDA982200A3AB3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67BD6DEE1BDA982200A3AB3D /* PBXTargetDependency */,
+			);
+			name = WeMakeFriendsUITests;
+			productName = WeMakeFriendsUITests;
+			productReference = 67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67BD6DC01BDA982200A3AB3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Shih Chi Lin";
+				TargetAttributes = {
+					67BD6DC71BDA982200A3AB3D = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SNDW4UT5VM;
+					};
+					67BD6DE01BDA982200A3AB3D = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SNDW4UT5VM;
+						TestTargetID = 67BD6DC71BDA982200A3AB3D;
+					};
+					67BD6DEB1BDA982200A3AB3D = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SNDW4UT5VM;
+						TestTargetID = 67BD6DC71BDA982200A3AB3D;
+					};
+				};
+			};
+			buildConfigurationList = 67BD6DC31BDA982200A3AB3D /* Build configuration list for PBXProject "WeMakeFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67BD6DBF1BDA982200A3AB3D;
+			productRefGroup = 67BD6DC91BDA982200A3AB3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67BD6DC71BDA982200A3AB3D /* WeMakeFriends */,
+				67BD6DE01BDA982200A3AB3D /* WeMakeFriendsTests */,
+				67BD6DEB1BDA982200A3AB3D /* WeMakeFriendsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67BD6DC61BDA982200A3AB3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */,
+				67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */,
+				67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DDF1BDA982200A3AB3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DEA1BDA982200A3AB3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67BD6DC41BDA982200A3AB3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */,
+				670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */,
+				67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */,
+				670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */,
+				670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */,
+				670C70DC1BE00DA900C83AE2 /* Users.m in Sources */,
+				67BD6DCD1BDA982200A3AB3D /* main.m in Sources */,
+				670C70D31BE003CE00C83AE2 /* ListTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DDD1BDA982200A3AB3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BD6DE61BDA982200A3AB3D /* WeMakeFriendsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD6DE81BDA982200A3AB3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BD6DF11BDA982200A3AB3D /* WeMakeFriendsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67BD6DE31BDA982200A3AB3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67BD6DC71BDA982200A3AB3D /* WeMakeFriends */;
+			targetProxy = 67BD6DE21BDA982200A3AB3D /* PBXContainerItemProxy */;
+		};
+		67BD6DEE1BDA982200A3AB3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67BD6DC71BDA982200A3AB3D /* WeMakeFriends */;
+			targetProxy = 67BD6DED1BDA982200A3AB3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67BD6DDA1BDA982200A3AB3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67BD6DF31BDA982200A3AB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lsqlite3",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		67BD6DF41BDA982200A3AB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lsqlite3",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67BD6DF61BDA982200A3AB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WeMakeFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		67BD6DF71BDA982200A3AB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WeMakeFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		67BD6DF91BDA982200A3AB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeMakeFriendsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeMakeFriends.app/WeMakeFriends";
+			};
+			name = Debug;
+		};
+		67BD6DFA1BDA982200A3AB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeMakeFriendsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeMakeFriends.app/WeMakeFriends";
+			};
+			name = Release;
+		};
+		67BD6DFC1BDA982200A3AB3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeMakeFriendsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WeMakeFriends;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		67BD6DFD1BDA982200A3AB3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeMakeFriendsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WeMakeFriends;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67BD6DC31BDA982200A3AB3D /* Build configuration list for PBXProject "WeMakeFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD6DF31BDA982200A3AB3D /* Debug */,
+				67BD6DF41BDA982200A3AB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67BD6DF51BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD6DF61BDA982200A3AB3D /* Debug */,
+				67BD6DF71BDA982200A3AB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67BD6DF81BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD6DF91BDA982200A3AB3D /* Debug */,
+				67BD6DFA1BDA982200A3AB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67BD6DFB1BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD6DFC1BDA982200A3AB3D /* Debug */,
+				67BD6DFD1BDA982200A3AB3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67BD6DC01BDA982200A3AB3D /* Project object */;
+}
