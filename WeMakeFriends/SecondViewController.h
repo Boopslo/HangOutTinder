@@ -10,10 +10,12 @@
 #import "Users.h"
 #import <sqlite3.h>
 #import "ListTableViewController.h"
-
+#import "DatabaseManager.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface SecondViewController : UIViewController
 
 @property Users *currentUser;
+// might need the database variable(property)
 
 @end

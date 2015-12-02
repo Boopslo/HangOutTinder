@@ -9,10 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Users.h"
 #import <sqlite3.h>
+#import "FriendViewController.h"
+#import "EditProfileViewController.h"
+#import "DatabaseManager.h"
 
 
-@interface ListTableViewController : UITableViewController
+// this view controller declare itself as the delegate of the EditProfileViewController
+@interface ListTableViewController : UITableViewController 
 
 @property Users *currentUser;
+///// todo: need a database property?
+
+
+
+
 
 @end

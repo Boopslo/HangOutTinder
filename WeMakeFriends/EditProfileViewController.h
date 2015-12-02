@@ -9,8 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "Users.h"
 #import <sqlite3.h>
+#import "ListTableViewController.h"
+#import "DatabaseManager.h"
 
+
+@protocol UserProtocol <NSObject>
+
+-(void) sendBackUserData:(Users *)receivedUser;
+
+@end
+//@class ListTableViewController;
 
 @interface EditProfileViewController : UIViewController
+
+
+// EditProfileViewController --> second view controller
+@property (weak, nonatomic) id<UserProtocol> myDelegate;
+@property (strong, nonatomic) Users *currentUser;
+
 
 @end

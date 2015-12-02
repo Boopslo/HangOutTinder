@@ -24,6 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationItem setTitle:@"HOTinder"];
+}
 
 #pragma mark - Navigation
 
@@ -35,8 +39,7 @@
     // call the second view controller and set as destinationViewController
     // pass to second view controller
     //SecondViewController *secondView = [segue destinationViewController];
-    
-    ///// todo: should I connect to sqlite database here ?
+    ///// todo: connect to sqlite database here ?
     
 }
 

@@ -11,13 +11,15 @@
 
 @interface Users : NSObject
 
-@property (weak, nonatomic) NSString *username;
-@property (weak, nonatomic) NSString *phone;
-@property (weak, nonatomic) NSString *todo;
+// name is used to login sqlite3, username is used for displaying to friends
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *todo;
 
 // gender, school and age should be optional
-@property (weak, nonatomic) NSString *gender;
-@property (weak, nonatomic) NSString *school;
-@property (weak, nonatomic) NSString *age;
+@property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *facebook;
+@property BOOL isLoggedIn;
 
 @end

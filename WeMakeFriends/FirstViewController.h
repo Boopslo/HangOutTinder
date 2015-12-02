@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 #import "SecondViewController.h"
-
+#import "DatabaseManager.h"
 
 @interface FirstViewController : UIViewController
+
 
 @end

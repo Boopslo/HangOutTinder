@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670021E91C06499C00DD9CCA /* hottinder.sql in Resources */ = {isa = PBXBuildFile; fileRef = 670021E81C06499C00DD9CCA /* hottinder.sql */; };
+		6706FB171C0251A800C9C222 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB161C0251A800C9C222 /* libicucore.tbd */; };
+		6706FB191C0251B000C9C222 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB181C0251B000C9C222 /* libc++.tbd */; };
+		6706FB1B1C0251B900C9C222 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1A1C0251B900C9C222 /* CFNetwork.framework */; };
+		6706FB1D1C0251C100C9C222 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1C1C0251C100C9C222 /* Security.framework */; };
+		6706FB1F1C0251CD00C9C222 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */; };
 		670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C70C91BE001CC00C83AE2 /* Main.storyboard */; };
 		670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CC1BE0032600C83AE2 /* FirstViewController.m */; };
 		670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CF1BE0039C00C83AE2 /* SecondViewController.m */; };
@@ -14,13 +20,20 @@
 		670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */; };
 		670C70DC1BE00DA900C83AE2 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70DB1BE00DA900C83AE2 /* Users.m */; };
 		672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672929971BE3B3FF00B59F45 /* MapKit.framework */; };
+		674807EA1BE7F4E300E8DC1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674807E91BE7F4E300E8DC1B /* CoreLocation.framework */; };
+		675EEBA91BFDA8F0007D9F63 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */; };
 		679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679C83411BE46F0F0066CBF5 /* FriendViewController.m */; };
+		67B439181C036D320002A9EC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B439171C036D320002A9EC /* Firebase.framework */; };
+		67B4391A1C036D650002A9EC /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B439191C036D650002A9EC /* GeoFire.framework */; };
+		67B64F951BE6D0A20027F100 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B64F941BE6D0A20027F100 /* libsqlite3.tbd */; };
+		67B64F981BE6D1590027F100 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B64F971BE6D1590027F100 /* DatabaseManager.m */; };
 		67BD6DCD1BDA982200A3AB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCC1BDA982200A3AB3D /* main.m */; };
 		67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */; };
 		67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD71BDA982200A3AB3D /* Assets.xcassets */; };
 		67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */; };
 		67BD6DE61BDA982200A3AB3D /* WeMakeFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */; };
 		67BD6DF11BDA982200A3AB3D /* WeMakeFriendsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */; };
+		67FEE6F11BE9A6F8000AE82B /* users.sql in Resources */ = {isa = PBXBuildFile; fileRef = 67FEE6F01BE9A6F8000AE82B /* users.sql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670021E81C06499C00DD9CCA /* hottinder.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = hottinder.sql; sourceTree = "<group>"; };
+		6706FB161C0251A800C9C222 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6706FB181C0251B000C9C222 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6706FB1A1C0251B900C9C222 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6706FB1C1C0251C100C9C222 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		670C70C91BE001CC00C83AE2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		670C70CB1BE0032600C83AE2 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		670C70CC1BE0032600C83AE2 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
@@ -53,8 +72,16 @@
 		670C70DA1BE00DA900C83AE2 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
 		670C70DB1BE00DA900C83AE2 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		672929971BE3B3FF00B59F45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		674807E91BE7F4E300E8DC1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		675EEBA71BFDA8F0007D9F63 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		679C83401BE46F0F0066CBF5 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendViewController.h; path = ../FriendViewController.h; sourceTree = "<group>"; };
 		679C83411BE46F0F0066CBF5 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendViewController.m; path = ../FriendViewController.m; sourceTree = "<group>"; };
+		67B439171C036D320002A9EC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		67B439191C036D650002A9EC /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoFire.framework; sourceTree = "<group>"; };
+		67B64F941BE6D0A20027F100 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		67B64F961BE6D1590027F100 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		67B64F971BE6D1590027F100 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMakeFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BD6DCC1BDA982200A3AB3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +95,7 @@
 		67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeFriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeFriendsUITests.m; sourceTree = "<group>"; };
 		67BD6DF21BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEE6F01BE9A6F8000AE82B /* users.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = users.sql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +103,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6706FB1F1C0251CD00C9C222 /* SystemConfiguration.framework in Frameworks */,
+				6706FB1D1C0251C100C9C222 /* Security.framework in Frameworks */,
+				6706FB1B1C0251B900C9C222 /* CFNetwork.framework in Frameworks */,
+				6706FB191C0251B000C9C222 /* libc++.tbd in Frameworks */,
+				67B439181C036D320002A9EC /* Firebase.framework in Frameworks */,
+				6706FB171C0251A800C9C222 /* libicucore.tbd in Frameworks */,
+				67B64F951BE6D0A20027F100 /* libsqlite3.tbd in Frameworks */,
+				674807EA1BE7F4E300E8DC1B /* CoreLocation.framework in Frameworks */,
 				672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */,
+				67B4391A1C036D650002A9EC /* GeoFire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +136,15 @@
 		67BD6DBF1BDA982200A3AB3D = {
 			isa = PBXGroup;
 			children = (
+				6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */,
+				6706FB1C1C0251C100C9C222 /* Security.framework */,
+				6706FB1A1C0251B900C9C222 /* CFNetwork.framework */,
+				6706FB181C0251B000C9C222 /* libc++.tbd */,
+				67B439171C036D320002A9EC /* Firebase.framework */,
+				6706FB161C0251A800C9C222 /* libicucore.tbd */,
+				67B439191C036D650002A9EC /* GeoFire.framework */,
+				674807E91BE7F4E300E8DC1B /* CoreLocation.framework */,
+				67B64F941BE6D0A20027F100 /* libsqlite3.tbd */,
 				672929971BE3B3FF00B59F45 /* MapKit.framework */,
 				67BD6DCA1BDA982200A3AB3D /* WeMakeFriends */,
 				67BD6DE41BDA982200A3AB3D /* WeMakeFriendsTests */,
@@ -122,9 +168,13 @@
 			children = (
 				67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */,
 				67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */,
+				670021E81C06499C00DD9CCA /* hottinder.sql */,
+				67FEE6F01BE9A6F8000AE82B /* users.sql */,
 				670C70C91BE001CC00C83AE2 /* Main.storyboard */,
 				670C70DA1BE00DA900C83AE2 /* Users.h */,
 				670C70DB1BE00DA900C83AE2 /* Users.m */,
+				675EEBA71BFDA8F0007D9F63 /* MyAnnotation.h */,
+				675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */,
 				679C83401BE46F0F0066CBF5 /* FriendViewController.h */,
 				679C83411BE46F0F0066CBF5 /* FriendViewController.m */,
 				670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */,
@@ -135,6 +185,8 @@
 				670C70CF1BE0039C00C83AE2 /* SecondViewController.m */,
 				670C70CB1BE0032600C83AE2 /* FirstViewController.h */,
 				670C70CC1BE0032600C83AE2 /* FirstViewController.m */,
+				67B64F961BE6D1590027F100 /* DatabaseManager.h */,
+				67B64F971BE6D1590027F100 /* DatabaseManager.m */,
 				67BD6DD71BDA982200A3AB3D /* Assets.xcassets */,
 				67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */,
 				67BD6DDC1BDA982200A3AB3D /* Info.plist */,
@@ -275,7 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670021E91C06499C00DD9CCA /* hottinder.sql in Resources */,
 				670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */,
+				67FEE6F11BE9A6F8000AE82B /* users.sql in Resources */,
 				67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */,
 				67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */,
 			);
@@ -303,10 +357,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */,
+				67B64F981BE6D1590027F100 /* DatabaseManager.m in Sources */,
 				670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */,
 				67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */,
 				670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */,
 				670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */,
+				675EEBA91BFDA8F0007D9F63 /* MyAnnotation.m in Sources */,
 				670C70DC1BE00DA900C83AE2 /* Users.m in Sources */,
 				67BD6DCD1BDA982200A3AB3D /* main.m in Sources */,
 				670C70D31BE003CE00C83AE2 /* ListTableViewController.m in Sources */,
@@ -376,6 +432,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -423,6 +480,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -448,7 +506,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeMakeFriends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,7 +523,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeMakeFriends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
