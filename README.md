@@ -5,6 +5,8 @@ ps. iOS Programming class project.
 
 ## Purpose 
 By using this app, users are allowed to find other app users around you in 1 kilometer. Users will then decide if they want to do anything with new friends, by filling out simple form in the app, users will be able to reach each other.
+ 
+ -- third submit : added category that users can specify what kind of interest they have.
 
 ## Motivation
 Sometimes a flash through our mind make us want to do something. At that immediate moment,  we might need some random people around and we can hang out! This app is here for those kind of moments. 
