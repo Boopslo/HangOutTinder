@@ -1,5 +1,5 @@
 # HangOutTinder
-Just playing around with Objective-C, understanding Obj-C syntax and semantics by making a simple user interacting app.
+Playing around with Objective-C, understanding Obj-C syntax and semantics by making a simple user interacting app.
 
 ps. iOS Programming class project. 
 
