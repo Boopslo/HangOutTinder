@@ -32,10 +32,12 @@
     // Do any additional setup after loading the view.
     // initialize the Users object after successfully loading the screen
     self.currentUser = [[Users alloc] init];
+    if (self.currentImage == nil) {
+        self.currentImage = [[UserImage alloc] init];
+    }
     // initialize the database manager object
     self.dbManager = [[DatabaseManager alloc] initWithDatabaseFilename:@"hottinder.sql"];
     self.checkIfExists = NO;
-    
 }
 
 - (IBAction)deleteRecord:(id)sender {
@@ -128,7 +130,7 @@
     return YES;
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet/*<UITouch *>*/ *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
@@ -142,6 +144,7 @@
     ListTableViewController *listView = [segue destinationViewController];
     // pass the data to next controller
     listView.currentUser = self.currentUser;
+    listView.currentImage = self.currentImage;
     ///// todo: pass the database property to the next view controller?
 }
 

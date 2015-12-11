@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Users.h"
+#import "UserImage.h"
 #import <sqlite3.h>
 #import "ListTableViewController.h"
 #import "DatabaseManager.h"
@@ -16,6 +17,7 @@
 @interface SecondViewController : UIViewController
 
 @property Users *currentUser;
+@property UserImage *currentImage;
 // might need the database variable(property)
 
 @end

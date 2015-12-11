@@ -105,7 +105,6 @@
                 }
             } else {
                 // if the query is exexcutable, means it is an insert, update or delete statement
-                
                 // execute the query
                 int executeQuery = sqlite3_step(compileStatement);
                 if (executeQuery == SQLITE_DONE) {

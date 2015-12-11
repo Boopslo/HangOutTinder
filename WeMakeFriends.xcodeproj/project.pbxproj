@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2195A4E41C10DED700458B69 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2195A4E31C10DED700458B69 /* CategoryTableViewController.m */; };
+		2195A4E61C10E0AF00458B69 /* Category.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2195A4E51C10E0AF00458B69 /* Category.plist */; };
+		2195A4E81C10EA6C00458B69 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2195A4E71C10EA6C00458B69 /* ListTableViewController.m */; };
+		21DB8E631C111350001F82BA /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21DB8E621C111350001F82BA /* Launch Screen.xib */; };
 		670021E91C06499C00DD9CCA /* hottinder.sql in Resources */ = {isa = PBXBuildFile; fileRef = 670021E81C06499C00DD9CCA /* hottinder.sql */; };
-		6706FB171C0251A800C9C222 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB161C0251A800C9C222 /* libicucore.tbd */; };
-		6706FB191C0251B000C9C222 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB181C0251B000C9C222 /* libc++.tbd */; };
 		6706FB1B1C0251B900C9C222 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1A1C0251B900C9C222 /* CFNetwork.framework */; };
 		6706FB1D1C0251C100C9C222 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1C1C0251C100C9C222 /* Security.framework */; };
 		6706FB1F1C0251CD00C9C222 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */; };
 		670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C70C91BE001CC00C83AE2 /* Main.storyboard */; };
 		670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CC1BE0032600C83AE2 /* FirstViewController.m */; };
 		670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70CF1BE0039C00C83AE2 /* SecondViewController.m */; };
-		670C70D31BE003CE00C83AE2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70D21BE003CE00C83AE2 /* ListTableViewController.m */; };
 		670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */; };
 		670C70DC1BE00DA900C83AE2 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C70DB1BE00DA900C83AE2 /* Users.m */; };
 		672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672929971BE3B3FF00B59F45 /* MapKit.framework */; };
 		674807EA1BE7F4E300E8DC1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674807E91BE7F4E300E8DC1B /* CoreLocation.framework */; };
+		67498EF31C0EA49C00143301 /* RegExCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 67498EF21C0EA49C00143301 /* RegExCategories.m */; };
 		675EEBA91BFDA8F0007D9F63 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */; };
+		6773C1EB1C0FF1870024594A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773C1EA1C0FF1870024594A /* AudioToolbox.framework */; };
+		6773C1ED1C0FF1920024594A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773C1EC1C0FF1910024594A /* CoreGraphics.framework */; };
+		6773C1F11C0FF1AD0024594A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773C1F01C0FF1AD0024594A /* MobileCoreServices.framework */; };
+		6773C1F31C0FF1B90024594A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773C1F21C0FF1B90024594A /* QuartzCore.framework */; };
+		6773C1F91C0FF7EF0024594A /* UserImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773C1F81C0FF7EF0024594A /* UserImage.m */; };
+		678E6FE51C1A6127008B55C0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 678E6FE41C1A6127008B55C0 /* libicucore.tbd */; };
+		678E6FE71C1A612F008B55C0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 678E6FE61C1A612F008B55C0 /* libsqlite3.tbd */; };
+		678E6FE91C1A6136008B55C0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 678E6FE81C1A6136008B55C0 /* libc++.tbd */; };
+		678E6FEB1C1A6141008B55C0 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 678E6FEA1C1A6141008B55C0 /* libz.1.1.3.tbd */; };
 		679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679C83411BE46F0F0066CBF5 /* FriendViewController.m */; };
 		67B439181C036D320002A9EC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B439171C036D320002A9EC /* Firebase.framework */; };
 		67B4391A1C036D650002A9EC /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B439191C036D650002A9EC /* GeoFire.framework */; };
-		67B64F951BE6D0A20027F100 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B64F941BE6D0A20027F100 /* libsqlite3.tbd */; };
 		67B64F981BE6D1590027F100 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B64F971BE6D1590027F100 /* DatabaseManager.m */; };
 		67BD6DCD1BDA982200A3AB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCC1BDA982200A3AB3D /* main.m */; };
 		67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */; };
 		67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD71BDA982200A3AB3D /* Assets.xcassets */; };
-		67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */; };
 		67BD6DE61BDA982200A3AB3D /* WeMakeFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */; };
-		67BD6DF11BDA982200A3AB3D /* WeMakeFriendsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */; };
 		67FEE6F11BE9A6F8000AE82B /* users.sql in Resources */ = {isa = PBXBuildFile; fileRef = 67FEE6F01BE9A6F8000AE82B /* users.sql */; };
 /* End PBXBuildFile section */
 
@@ -44,19 +52,15 @@
 			remoteGlobalIDString = 67BD6DC71BDA982200A3AB3D;
 			remoteInfo = WeMakeFriends;
 		};
-		67BD6DED1BDA982200A3AB3D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67BD6DC01BDA982200A3AB3D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67BD6DC71BDA982200A3AB3D;
-			remoteInfo = WeMakeFriends;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2195A4E21C10DED700458B69 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		2195A4E31C10DED700458B69 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		2195A4E51C10E0AF00458B69 /* Category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Category.plist; sourceTree = "<group>"; };
+		2195A4E71C10EA6C00458B69 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		21DB8E621C111350001F82BA /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		670021E81C06499C00DD9CCA /* hottinder.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = hottinder.sql; sourceTree = "<group>"; };
-		6706FB161C0251A800C9C222 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		6706FB181C0251B000C9C222 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6706FB1A1C0251B900C9C222 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6706FB1C1C0251C100C9C222 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -66,20 +70,31 @@
 		670C70CE1BE0039C00C83AE2 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		670C70CF1BE0039C00C83AE2 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		670C70D11BE003CE00C83AE2 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
-		670C70D21BE003CE00C83AE2 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		670C70DA1BE00DA900C83AE2 /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
 		670C70DB1BE00DA900C83AE2 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		672929971BE3B3FF00B59F45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		674807E91BE7F4E300E8DC1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		67498EF11C0EA49C00143301 /* RegExCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegExCategories.h; sourceTree = "<group>"; };
+		67498EF21C0EA49C00143301 /* RegExCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExCategories.m; sourceTree = "<group>"; };
 		675EEBA71BFDA8F0007D9F63 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		6773C1EA1C0FF1870024594A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6773C1EC1C0FF1910024594A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6773C1F01C0FF1AD0024594A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6773C1F21C0FF1B90024594A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6773C1F61C0FF51E0024594A /* NSStrinAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStrinAdditions.h; sourceTree = "<group>"; };
+		6773C1F71C0FF7EF0024594A /* UserImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImage.h; sourceTree = "<group>"; };
+		6773C1F81C0FF7EF0024594A /* UserImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImage.m; sourceTree = "<group>"; };
+		678E6FE41C1A6127008B55C0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		678E6FE61C1A612F008B55C0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		678E6FE81C1A6136008B55C0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		678E6FEA1C1A6141008B55C0 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		679C83401BE46F0F0066CBF5 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendViewController.h; path = ../FriendViewController.h; sourceTree = "<group>"; };
 		679C83411BE46F0F0066CBF5 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendViewController.m; path = ../FriendViewController.m; sourceTree = "<group>"; };
 		67B439171C036D320002A9EC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		67B439191C036D650002A9EC /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoFire.framework; sourceTree = "<group>"; };
-		67B64F941BE6D0A20027F100 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		67B64F961BE6D1590027F100 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		67B64F971BE6D1590027F100 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMakeFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,12 +102,10 @@
 		67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		67BD6DD71BDA982200A3AB3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		67BD6DDA1BDA982200A3AB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67BD6DDC1BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BD6DE51BDA982200A3AB3D /* WeMakeFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeFriendsTests.m; sourceTree = "<group>"; };
 		67BD6DE71BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeFriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BD6DF01BDA982200A3AB3D /* WeMakeFriendsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeFriendsUITests.m; sourceTree = "<group>"; };
 		67BD6DF21BDA982200A3AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FEE6F01BE9A6F8000AE82B /* users.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = users.sql; sourceTree = "<group>"; };
@@ -103,13 +116,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678E6FEB1C1A6141008B55C0 /* libz.1.1.3.tbd in Frameworks */,
+				678E6FE91C1A6136008B55C0 /* libc++.tbd in Frameworks */,
+				678E6FE71C1A612F008B55C0 /* libsqlite3.tbd in Frameworks */,
+				678E6FE51C1A6127008B55C0 /* libicucore.tbd in Frameworks */,
+				6773C1F31C0FF1B90024594A /* QuartzCore.framework in Frameworks */,
+				6773C1F11C0FF1AD0024594A /* MobileCoreServices.framework in Frameworks */,
+				6773C1ED1C0FF1920024594A /* CoreGraphics.framework in Frameworks */,
+				6773C1EB1C0FF1870024594A /* AudioToolbox.framework in Frameworks */,
 				6706FB1F1C0251CD00C9C222 /* SystemConfiguration.framework in Frameworks */,
 				6706FB1D1C0251C100C9C222 /* Security.framework in Frameworks */,
 				6706FB1B1C0251B900C9C222 /* CFNetwork.framework in Frameworks */,
-				6706FB191C0251B000C9C222 /* libc++.tbd in Frameworks */,
 				67B439181C036D320002A9EC /* Firebase.framework in Frameworks */,
-				6706FB171C0251A800C9C222 /* libicucore.tbd in Frameworks */,
-				67B64F951BE6D0A20027F100 /* libsqlite3.tbd in Frameworks */,
 				674807EA1BE7F4E300E8DC1B /* CoreLocation.framework in Frameworks */,
 				672929981BE3B3FF00B59F45 /* MapKit.framework in Frameworks */,
 				67B4391A1C036D650002A9EC /* GeoFire.framework in Frameworks */,
@@ -123,28 +141,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67BD6DE91BDA982200A3AB3D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2195A4DE1C10DB7F00458B69 /* User Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				670C70DA1BE00DA900C83AE2 /* Users.h */,
+				670C70DB1BE00DA900C83AE2 /* Users.m */,
+				6773C1F71C0FF7EF0024594A /* UserImage.h */,
+				6773C1F81C0FF7EF0024594A /* UserImage.m */,
+			);
+			name = "User Profiles";
+			sourceTree = "<group>";
+		};
+		2195A4DF1C10DB9E00458B69 /* Reference Class */ = {
+			isa = PBXGroup;
+			children = (
+				6773C1F61C0FF51E0024594A /* NSStrinAdditions.h */,
+				67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */,
+				67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */,
+				67498EF11C0EA49C00143301 /* RegExCategories.h */,
+				67498EF21C0EA49C00143301 /* RegExCategories.m */,
+			);
+			name = "Reference Class";
+			sourceTree = "<group>";
+		};
+		2195A4E01C10DBAF00458B69 /* SQLite Files */ = {
+			isa = PBXGroup;
+			children = (
+				670021E81C06499C00DD9CCA /* hottinder.sql */,
+				67FEE6F01BE9A6F8000AE82B /* users.sql */,
+			);
+			name = "SQLite Files";
+			sourceTree = "<group>";
+		};
+		2195A4E11C10DBD600458B69 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2195A4E21C10DED700458B69 /* CategoryTableViewController.h */,
+				2195A4E31C10DED700458B69 /* CategoryTableViewController.m */,
+				679C83401BE46F0F0066CBF5 /* FriendViewController.h */,
+				679C83411BE46F0F0066CBF5 /* FriendViewController.m */,
+				670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */,
+				670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */,
+				670C70D11BE003CE00C83AE2 /* ListTableViewController.h */,
+				2195A4E71C10EA6C00458B69 /* ListTableViewController.m */,
+				670C70CE1BE0039C00C83AE2 /* SecondViewController.h */,
+				670C70CF1BE0039C00C83AE2 /* SecondViewController.m */,
+				670C70CB1BE0032600C83AE2 /* FirstViewController.h */,
+				670C70CC1BE0032600C83AE2 /* FirstViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		67BD6DBF1BDA982200A3AB3D = {
 			isa = PBXGroup;
 			children = (
+				678E6FEA1C1A6141008B55C0 /* libz.1.1.3.tbd */,
+				678E6FE81C1A6136008B55C0 /* libc++.tbd */,
+				678E6FE61C1A612F008B55C0 /* libsqlite3.tbd */,
+				678E6FE41C1A6127008B55C0 /* libicucore.tbd */,
+				21DB8E621C111350001F82BA /* Launch Screen.xib */,
+				6773C1F21C0FF1B90024594A /* QuartzCore.framework */,
+				6773C1F01C0FF1AD0024594A /* MobileCoreServices.framework */,
+				6773C1EC1C0FF1910024594A /* CoreGraphics.framework */,
+				6773C1EA1C0FF1870024594A /* AudioToolbox.framework */,
 				6706FB1E1C0251CD00C9C222 /* SystemConfiguration.framework */,
 				6706FB1C1C0251C100C9C222 /* Security.framework */,
 				6706FB1A1C0251B900C9C222 /* CFNetwork.framework */,
-				6706FB181C0251B000C9C222 /* libc++.tbd */,
 				67B439171C036D320002A9EC /* Firebase.framework */,
-				6706FB161C0251A800C9C222 /* libicucore.tbd */,
 				67B439191C036D650002A9EC /* GeoFire.framework */,
 				674807E91BE7F4E300E8DC1B /* CoreLocation.framework */,
-				67B64F941BE6D0A20027F100 /* libsqlite3.tbd */,
 				672929971BE3B3FF00B59F45 /* MapKit.framework */,
 				67BD6DCA1BDA982200A3AB3D /* WeMakeFriends */,
 				67BD6DE41BDA982200A3AB3D /* WeMakeFriendsTests */,
@@ -158,7 +226,6 @@
 			children = (
 				67BD6DC81BDA982200A3AB3D /* WeMakeFriends.app */,
 				67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */,
-				67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,30 +233,12 @@
 		67BD6DCA1BDA982200A3AB3D /* WeMakeFriends */ = {
 			isa = PBXGroup;
 			children = (
-				67BD6DCE1BDA982200A3AB3D /* AppDelegate.h */,
-				67BD6DCF1BDA982200A3AB3D /* AppDelegate.m */,
-				670021E81C06499C00DD9CCA /* hottinder.sql */,
-				67FEE6F01BE9A6F8000AE82B /* users.sql */,
+				2195A4DF1C10DB9E00458B69 /* Reference Class */,
+				2195A4E01C10DBAF00458B69 /* SQLite Files */,
 				670C70C91BE001CC00C83AE2 /* Main.storyboard */,
-				670C70DA1BE00DA900C83AE2 /* Users.h */,
-				670C70DB1BE00DA900C83AE2 /* Users.m */,
-				675EEBA71BFDA8F0007D9F63 /* MyAnnotation.h */,
-				675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */,
-				679C83401BE46F0F0066CBF5 /* FriendViewController.h */,
-				679C83411BE46F0F0066CBF5 /* FriendViewController.m */,
-				670C70D41BE0040F00C83AE2 /* EditProfileViewController.h */,
-				670C70D51BE0040F00C83AE2 /* EditProfileViewController.m */,
-				670C70D11BE003CE00C83AE2 /* ListTableViewController.h */,
-				670C70D21BE003CE00C83AE2 /* ListTableViewController.m */,
-				670C70CE1BE0039C00C83AE2 /* SecondViewController.h */,
-				670C70CF1BE0039C00C83AE2 /* SecondViewController.m */,
-				670C70CB1BE0032600C83AE2 /* FirstViewController.h */,
-				670C70CC1BE0032600C83AE2 /* FirstViewController.m */,
-				67B64F961BE6D1590027F100 /* DatabaseManager.h */,
-				67B64F971BE6D1590027F100 /* DatabaseManager.m */,
+				2195A4DE1C10DB7F00458B69 /* User Profiles */,
+				2195A4E11C10DBD600458B69 /* View Controllers */,
 				67BD6DD71BDA982200A3AB3D /* Assets.xcassets */,
-				67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */,
-				67BD6DDC1BDA982200A3AB3D /* Info.plist */,
 				67BD6DCB1BDA982200A3AB3D /* Supporting Files */,
 			);
 			path = WeMakeFriends;
@@ -198,6 +247,12 @@
 		67BD6DCB1BDA982200A3AB3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2195A4E51C10E0AF00458B69 /* Category.plist */,
+				67BD6DDC1BDA982200A3AB3D /* Info.plist */,
+				67B64F961BE6D1590027F100 /* DatabaseManager.h */,
+				67B64F971BE6D1590027F100 /* DatabaseManager.m */,
+				675EEBA71BFDA8F0007D9F63 /* MyAnnotation.h */,
+				675EEBA81BFDA8F0007D9F63 /* MyAnnotation.m */,
 				67BD6DCC1BDA982200A3AB3D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -259,24 +314,6 @@
 			productReference = 67BD6DE11BDA982200A3AB3D /* WeMakeFriendsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		67BD6DEB1BDA982200A3AB3D /* WeMakeFriendsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67BD6DFB1BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsUITests" */;
-			buildPhases = (
-				67BD6DE81BDA982200A3AB3D /* Sources */,
-				67BD6DE91BDA982200A3AB3D /* Frameworks */,
-				67BD6DEA1BDA982200A3AB3D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				67BD6DEE1BDA982200A3AB3D /* PBXTargetDependency */,
-			);
-			name = WeMakeFriendsUITests;
-			productName = WeMakeFriendsUITests;
-			productReference = 67BD6DEC1BDA982200A3AB3D /* WeMakeFriendsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,11 +328,6 @@
 						DevelopmentTeam = SNDW4UT5VM;
 					};
 					67BD6DE01BDA982200A3AB3D = {
-						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = SNDW4UT5VM;
-						TestTargetID = 67BD6DC71BDA982200A3AB3D;
-					};
-					67BD6DEB1BDA982200A3AB3D = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = SNDW4UT5VM;
 						TestTargetID = 67BD6DC71BDA982200A3AB3D;
@@ -317,7 +349,6 @@
 			targets = (
 				67BD6DC71BDA982200A3AB3D /* WeMakeFriends */,
 				67BD6DE01BDA982200A3AB3D /* WeMakeFriendsTests */,
-				67BD6DEB1BDA982200A3AB3D /* WeMakeFriendsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,22 +358,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2195A4E61C10E0AF00458B69 /* Category.plist in Resources */,
 				670021E91C06499C00DD9CCA /* hottinder.sql in Resources */,
 				670C70CA1BE001CC00C83AE2 /* Main.storyboard in Resources */,
 				67FEE6F11BE9A6F8000AE82B /* users.sql in Resources */,
-				67BD6DDB1BDA982200A3AB3D /* LaunchScreen.storyboard in Resources */,
 				67BD6DD81BDA982200A3AB3D /* Assets.xcassets in Resources */,
+				21DB8E631C111350001F82BA /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		67BD6DDF1BDA982200A3AB3D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67BD6DEA1BDA982200A3AB3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,14 +383,17 @@
 			files = (
 				679C83421BE46F0F0066CBF5 /* FriendViewController.m in Sources */,
 				67B64F981BE6D1590027F100 /* DatabaseManager.m in Sources */,
+				2195A4E81C10EA6C00458B69 /* ListTableViewController.m in Sources */,
+				67498EF31C0EA49C00143301 /* RegExCategories.m in Sources */,
 				670C70D01BE0039C00C83AE2 /* SecondViewController.m in Sources */,
 				67BD6DD01BDA982200A3AB3D /* AppDelegate.m in Sources */,
 				670C70D61BE0040F00C83AE2 /* EditProfileViewController.m in Sources */,
 				670C70CD1BE0032600C83AE2 /* FirstViewController.m in Sources */,
 				675EEBA91BFDA8F0007D9F63 /* MyAnnotation.m in Sources */,
+				6773C1F91C0FF7EF0024594A /* UserImage.m in Sources */,
 				670C70DC1BE00DA900C83AE2 /* Users.m in Sources */,
+				2195A4E41C10DED700458B69 /* CategoryTableViewController.m in Sources */,
 				67BD6DCD1BDA982200A3AB3D /* main.m in Sources */,
-				670C70D31BE003CE00C83AE2 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,14 +405,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67BD6DE81BDA982200A3AB3D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67BD6DF11BDA982200A3AB3D /* WeMakeFriendsUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -393,23 +413,7 @@
 			target = 67BD6DC71BDA982200A3AB3D /* WeMakeFriends */;
 			targetProxy = 67BD6DE21BDA982200A3AB3D /* PBXContainerItemProxy */;
 		};
-		67BD6DEE1BDA982200A3AB3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67BD6DC71BDA982200A3AB3D /* WeMakeFriends */;
-			targetProxy = 67BD6DED1BDA982200A3AB3D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		67BD6DD91BDA982200A3AB3D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67BD6DDA1BDA982200A3AB3D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		67BD6DF31BDA982200A3AB3D /* Debug */ = {
@@ -449,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -491,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -516,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -533,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -541,6 +547,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WeMakeFriendsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,34 +560,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WeMakeFriendsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeMakeFriends.app/WeMakeFriends";
-			};
-			name = Release;
-		};
-		67BD6DFC1BDA982200A3AB3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WeMakeFriendsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = WeMakeFriends;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		67BD6DFD1BDA982200A3AB3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WeMakeFriendsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oslo.WeMakeFriendsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = WeMakeFriends;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -610,15 +594,6 @@
 			buildConfigurations = (
 				67BD6DF91BDA982200A3AB3D /* Debug */,
 				67BD6DFA1BDA982200A3AB3D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67BD6DFB1BDA982200A3AB3D /* Build configuration list for PBXNativeTarget "WeMakeFriendsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67BD6DFC1BDA982200A3AB3D /* Debug */,
-				67BD6DFD1BDA982200A3AB3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

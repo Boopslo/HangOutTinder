@@ -8,10 +8,11 @@
 
 #import "ListTableViewController.h"
 
-@interface ListTableViewController () <UserProtocol>
+@interface ListTableViewController () <UserProtocol, CategoryProtocol>
 
 @property (strong, nonatomic) DatabaseManager *dbManager;
 @property (strong, nonatomic) NSArray *dataArray;
+@property NSString *currentCategory;
 
 -(void) loadData;
 
@@ -24,7 +25,10 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+    UIImage *image = [UIImage imageNamed:@"beach.png"];
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.alpha = 0.4f;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.dbManager = [[DatabaseManager alloc] initWithDatabaseFilename:@"hottinder.sql"];
@@ -64,7 +68,7 @@
 
 // the delegate method from EditProfileVC
 // implement the method of getting data from the forwarding view controller
--(void)sendBackUserData:(Users *)receivedUser {
+-(void)sendBackUserData:(Users *)receivedUser withImage:(UserImage *)receivedImage{
     // check the important fields that they are not empty
     if ((receivedUser.username.length != 0) && (receivedUser.email.length != 0) && (![receivedUser.todo isEqualToString:@""])) {
         // receive all the data from the call back User
@@ -74,6 +78,7 @@
         self.currentUser.phone = receivedUser.phone;
         self.currentUser.facebook = receivedUser.facebook;
     }
+    self.currentImage = receivedImage;
 }
 
 #pragma mark - Table view data source
@@ -85,13 +90,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *editProfile = @"editProfile";
     NSString *searchFriend = @"searchFriend";
+    NSString *chooseCategory = @"chooseCategory";
     
     // create two different type of cell to prepare to assign
     // UITableViewCell *cell = [[UITableViewCell alloc] init];
@@ -107,7 +113,6 @@
             NSString *displayUser = @"user: ";
             cell1.detailTextLabel.text = [displayUser stringByAppendingString:indexName];
         } else {
-            //NSLog(@"3 %@", self.currentUser.name);
 
             // it's the case that user didn't log into database but just insert data into the form
             // then we display the username, not the real name
@@ -123,13 +128,27 @@
             }
         }
         return cell1;
-    } else {
+    } else if (indexPath.row == 1){
         UITableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:searchFriend forIndexPath:indexPath];
         cell2.textLabel.text = searchFriend;
         return cell2;
+    } else {
+        UITableViewCell *cell3 = [tableView dequeueReusableCellWithIdentifier:chooseCategory forIndexPath:indexPath];
+        cell3.textLabel.text = chooseCategory;
+        if (self.currentCategory.length == 0) {
+            cell3.detailTextLabel.text = @"unknown";
+        } else {
+            cell3.detailTextLabel.text = self.currentCategory;
+        }
+        return cell3;
     }
     
 }
+
+-(void)getCategory:(NSString *)category {
+    self.currentCategory = category;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -167,6 +186,19 @@
 
 #pragma mark - Navigation
 
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"searchFriend"]) {
+        if (self.currentUser.username.length == 0 || self.currentUser.email.length == 0 || self.currentUser.todo.length == 0) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning !" message:@"user data is empty" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Go back re-enter" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action1){}];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+            return NO;
+        }
+    }
+    return YES;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -176,12 +208,19 @@
     if ([segue.identifier isEqualToString:@"editProfile"]) {
         EditProfileViewController *editUser = [segue destinationViewController];
         editUser.currentUser = self.currentUser;
+        editUser.currentImage = self.currentImage;
         // assign your class itself as the delegate of the forwarding view controller, so that you can implement the delegate methods
         editUser.myDelegate = self;
         // pass data to the new view controller
     } else if ([segue.identifier isEqualToString:@"searchFriend"]) {
         FriendViewController *lookForFriends = [segue destinationViewController];
         lookForFriends.currentUser = self.currentUser;
+        lookForFriends.currentImage = self.currentImage;
+        lookForFriends.currentCategory = self.currentCategory;
+    } else if ([segue.identifier isEqualToString:@"chooseCategory"]) {
+        CategoryTableViewController *categoryVC = [segue destinationViewController];
+        categoryVC.myDelegate = self;
+        
     }
 }
 

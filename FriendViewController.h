@@ -14,6 +14,8 @@
 #import "Users.h"
 #import "ListTableViewController.h"
 #import "DatabaseManager.h"
+#import "UserImage.h"
+#import "NSStrinAdditions.h"
 
 #import <Firebase/Firebase.h>
 #import <Firebase/FDataSnapshot.h>
@@ -28,11 +30,14 @@
 @interface FriendViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property Users *currentUser;
+@property UserImage *currentImage;
 ///// todo: maybe need database property
 @property CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property Firebase *firebase;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *contactOption;
+@property (weak, nonatomic) IBOutlet UIImageView *userProfilePicture;
+@property NSString *currentCategory;
 
 @end

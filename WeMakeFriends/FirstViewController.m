@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //[Parse setApplicationId:@"eYBIqDSfGBguBeBixWAZW0c3BwbrzIGpZuBhL57b" clientKey:@"cNPZqzK18ImGkDviFEGd4ep2UPDJ0hCalOVKBFxR"];
 }
 
 - (void)didReceiveMemoryWarning {

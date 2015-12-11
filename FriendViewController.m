@@ -13,7 +13,7 @@
 #define KM_TO_MILE 1.6
 #define START_LAT 37.32
 #define START_LONG -122.12
-#define SPAN_VALUE 0.05f
+#define SPAN_VALUE 0.01f
 
 @interface FriendViewController () 
 
@@ -23,6 +23,9 @@
 @property Firebase *locationRef;
 @property NSDictionary *userData;
 @property NSMutableArray *users;
+@property NSMutableArray *images;
+@property NSMutableArray *categoryUser;
+@property Users *whatever;
 
 @end
 
@@ -35,9 +38,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (self.currentCategory.length == 0) {
+        self.currentCategory = @"none";
+    }
     
     _userData = [[NSDictionary alloc] init];
     _users = [[NSMutableArray alloc] init];
+    _images = [[NSMutableArray alloc] init];
+    self.categoryUser = [[NSMutableArray alloc] init];
     [_textView setText:@"Search friends"];
     //[Firebase defaultConfig].persistenceEnabled = YES;
 
@@ -89,7 +97,9 @@
         @"email": (self.currentUser.email.length > 0) ? self.currentUser.email : @"",
         @"todo": (self.currentUser.todo.length > 0) ? self.currentUser.todo : @"",
         @"phone": (self.currentUser.phone.length > 0) ? self.currentUser.phone : @"",
-        @"facebook": (self.currentUser.facebook.length > 0) ? self.currentUser.facebook : @""
+        @"facebook": (self.currentUser.facebook.length > 0) ? self.currentUser.facebook : @"",
+        @"image": (self.currentImage.userImageString.length > 0) ? self.currentImage.userImageString : @"",
+        @"category" : (![self.currentCategory isEqualToString:@"none"]) ? self.currentCategory : @"none"
     };
     
     // get whole copy of data, check if the username already exists in that copy
@@ -177,9 +187,12 @@
         }
     }];
     [self.userRef removeAllObservers];
+    [self.users removeAllObjects];
+    [self.images removeAllObjects];
+    [self.categoryUser removeAllObjects];
 }
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray/*<CLLocation *>*/ *)locations {
     [self.mapView removeAnnotations:[self.mapView annotations]];
     //[self.mapView setCenterCoordinate:self.mapView.region.center animated:NO];
     // get the last updated location
@@ -197,7 +210,6 @@
             NSLog(@"update location successful.");
         }
     }];
-
     /******  query location data every time you updated your own location  ******/
     [self updateFriendsLocation:self.currentLocation];
     
@@ -239,21 +251,42 @@
                         // set the title and subtitle for the notation
                         otherNotation.title = snapshot.value[@"name"];
                         otherNotation.subtitle = snapshot.value[@"todo"];
-                        
-                        Users *tempUser = [[Users alloc] init];
-                        tempUser.username = snapshot.value[@"name"];
-                        tempUser.phone = snapshot.value[@"phone"];
-                        tempUser.todo = snapshot.value[@"todo"];
-                        tempUser.email = snapshot.value[@"email"];
-                        tempUser.facebook = snapshot.value[@"facebook"];
-                        
+                        UserImage *tempImage = [[UserImage alloc] init];
                         // add annotation to map view
-                        [self.mapView addAnnotation:otherNotation];
-                        otherNotation.showUser = tempUser;
-                        NSLog(@"username: %@ \nemail: %@\nwant to do: %@\nphone: %@\nfacebook: %@\n\n", otherNotation.showUser.username, otherNotation.showUser.email, otherNotation.showUser.todo, otherNotation.showUser.phone, otherNotation.showUser.facebook);
+                        NSLog(@"User:\n%@ \n%@ \n%@ \n%@ \n%@\n \n", otherNotation.showUser.username, otherNotation.showUser.email, otherNotation.showUser.todo, otherNotation.showUser.phone, otherNotation.showUser.facebook);
                         
+                        if (![self.currentCategory isEqualToString:@"none"]) {
+                            if ([self.currentCategory isEqualToString:snapshot.value[@"category"]]) {
+                                Users *chosen = [[Users alloc] init];
+                                chosen.username = snapshot.value[@"name"];
+                                chosen.email = snapshot.value[@"email"];
+                                chosen.todo = snapshot.value[@"todo"];
+                                chosen.phone = snapshot.value[@"phone"];
+                                chosen.facebook = snapshot.value[@"facebook"];
+                                otherNotation.showUser = chosen;
+                                [self.categoryUser addObject:chosen];
+                                //UserImage *image = [[UserImage alloc] init];
+                                tempImage.imageName = chosen.name;
+                                [self.mapView addAnnotation:otherNotation];
+                            }
+                        } else {
+                            Users *tempUser = [[Users alloc] init];
+                            tempUser.username = snapshot.value[@"name"];
+                            tempUser.phone = snapshot.value[@"phone"];
+                            tempUser.todo = snapshot.value[@"todo"];
+                            tempUser.email = snapshot.value[@"email"];
+                            tempUser.facebook = snapshot.value[@"facebook"];
+                            //UserImage *tempImage = [[UserImage alloc] init];
+                            tempImage.imageName = tempUser.username;
+                            [self.mapView addAnnotation:otherNotation];
+                            otherNotation.showUser = tempUser;
+                            [self.users addObject:tempUser];
+                        }
+                        tempImage.userImageString = snapshot.value[@"image"];
+                        
+                        [self.images addObject:tempImage];
+
                         // add annotation to the mutable array
-                        [self.users addObject:tempUser];
                     } else {
                         NSLog(@"GeoFire does not contain location.");
                     }
@@ -264,7 +297,6 @@
                 NSLog(@"Error occurred when getting Firebase data.");
             }
         }];
-        
     } withCancelBlock:^(NSError *error) {
         NSLog(@"Get user data failed.");
     }];
@@ -288,8 +320,8 @@
 // this is what your annotation will appear when you clicked it
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
-    annotationView.pinTintColor = [UIColor redColor];
-    
+//    annotationView.pinTintColor = [UIColor redColor];
+    annotationView.pinColor = MKPinAnnotationColorRed;
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
     annotationView.animatesDrop = YES;
@@ -302,21 +334,59 @@
 // if the annoation is tapped, display the tapped data in the textview
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     // get reference to the annotation to get data
+    NSString *compare = @"";
     NSString *string = @"";
-    for (Users *user in self.users) {
-        if ([user.username isEqualToString:view.annotation.title]) {
-            NSString *temp = [NSString stringWithFormat:@"username: %@ \nemail: %@\nwant to do: %@\nphone: %@\nfacebook: %@\n\n", user.username, user.email, user.todo, user.phone, user.facebook];
-            string = [string stringByAppendingString:temp];
-            // keep a copy of user, you will update data every time if you tapped different pin
-            userToDisplay = user;
-            [self.textView setText:string];
+    if ([self.currentCategory isEqualToString:@"none"]) {
+//        // search whatever thing
+        for (Users *user in self.users) {
+            if ([user.username isEqualToString:view.annotation.title]) {
+                NSString *temp = [NSString stringWithFormat:@"User:\nname: %@ \nemail: %@ \nin mind: %@ \nphone: %@ \nfacebook: %@\n \n", user.username, user.email, user.todo, user.phone, user.facebook];
+                string = [string stringByAppendingString:temp];
+                // keep a copy of user, you will update data every time if you tapped different pin
+                userToDisplay = user;
+                compare = user.username;
+                [self.textView setText:string];
+                break;
+            }
+        }
+    } else {
+        // you specified the categories that you wnat to search
+        for (Users *cats in self.categoryUser) {
+            if ([cats.username isEqualToString:view.annotation.title]) {
+                NSString *temp = [NSString stringWithFormat:@"Search for:%@ \nUser:\n%@ \n%@ \n%@ \n%@ \n%@\n \n", self.currentCategory, cats.username, cats.email, cats.todo, cats.phone, cats.facebook];
+                string = [string stringByAppendingString:temp];
+                userToDisplay = cats;
+                compare = cats.username;
+                //[self.textView setText:@"fgdsfsdgiuhsdfgiuhgdfapouhagjhbdfsphouadfgiophu"];
+                [self.textView setText:string];
+                break;
+            }
+        }
+    }
+    for (UserImage *image in self.images) {
+        if ([image.imageName isEqualToString:compare]) {
+            NSData *dataFromBase64 = [NSData base64DataFromString:image.userImageString];
+            self.userProfilePicture.image = [[UIImage alloc] initWithData:dataFromBase64];
             break;
         }
     }
 }
 
 - (IBAction)displayFriendData:(id)sender {
+    // clean all the user data first
+    [self.users removeAllObjects];
+    [self.images removeAllObjects];
+    [self.categoryUser removeAllObjects];
+    // restart updating user location
     [self.locationManager startUpdatingLocation];
+    MKCoordinateRegion myRegion;
+    // set the map center to the current location and add a region
+    myRegion.center.latitude = self.currentLocation.coordinate.latitude;
+    myRegion.center.longitude = self.currentLocation.coordinate.longitude;
+    myRegion.span.latitudeDelta = SPAN_VALUE;
+    myRegion.span.longitudeDelta = SPAN_VALUE;
+    // move to the current region
+    [self.mapView setRegion:myRegion animated:YES];
 }
 
 // make text field hold placeholder text
@@ -327,18 +397,17 @@
     return YES;
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet/*<UITouch *>*/ *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
 // responsive method when choosing segmented control
 - (IBAction)connectFriend:(id)sender {
     NSString *messageTo = @"sms:+";
-    NSString *recipient = @"";
     if (userToDisplay.phone.length != 0) {
-        recipient = [messageTo stringByAppendingString:userToDisplay.phone];
+        messageTo = [messageTo stringByAppendingString:userToDisplay.phone];
     }
-    NSString *userEmail  = @"";
+    NSString *userEmail  = @"mailto:";
     if (userToDisplay.email.length != 0) {
         userEmail = [userEmail stringByAppendingString:userToDisplay.email];
     }
@@ -349,7 +418,7 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com"]];
             break;
         case 1:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:recipient]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:messageTo]];
             break;
         case 2:
             if ([[UIApplication sharedApplication] canOpenURL:url]) {

@@ -12,12 +12,14 @@
 #import "FriendViewController.h"
 #import "EditProfileViewController.h"
 #import "DatabaseManager.h"
-
+#import "UserImage.h"
+#import "CategoryTableViewController.h"
 
 // this view controller declare itself as the delegate of the EditProfileViewController
 @interface ListTableViewController : UITableViewController 
 
 @property Users *currentUser;
+@property UserImage *currentImage;
 ///// todo: need a database property?
 
 

@@ -14,8 +14,12 @@
 
 
 #import "EditProfileViewController.h"
+#import "NSStrinAdditions.h"
 
 #define kOFFSET_FOR_KEYBOARD 80.0
+#define namePattern @"^\\b[a-zA-Z0-9\\s]+\\b$"
+#define emailPattern @"^\\b[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+#define phonePattern @"^\\b[0-9]+$"
 
 @interface EditProfileViewController () <UITextViewDelegate, UITextFieldDelegate>
 
@@ -33,6 +37,7 @@
 
 @implementation EditProfileViewController
 @synthesize myDelegate;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,6 +68,45 @@
             [self checkIfExists];
         }
     }
+}
+- (IBAction)choosePhoto:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (IBAction)takePhoto:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+    } else {
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary/*<NSString *,id>*/ *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.currentImage.userImage = chosenImage;
+    NSData *imageData = UIImagePNGRepresentation(self.currentImage.userImage);
+    self.currentImage.userImageString = [NSString base64StringFromData:imageData length:(int)[imageData length]];
+    NSLog(@"Image picked.");
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) loadUser {
@@ -110,37 +154,49 @@
     self.currentUser.phone = [self.phone text];
     // when try to access the UITextView, some problem is happening
     self.currentUser.email = [self.email text];
-    self.currentUser.facebook = [self.facebook text];
+    if (self.facebook.text.length == 0) {
+        self.currentUser.facebook = @"None";
+    } else {
+        self.currentUser.facebook = [self.facebook text];
+    }
     self.currentUser.todo = [self.something text];
     
-    if (self.currentUser.name.length != 0) {
-        // if user logged into sqlite3 database we have to check textfields validation
-        if (self.username.text.length != 0 && self.email.text.length != 0 && self.something.text.length != 0) {
-            // store data in database manager
-            NSString *queryUpdate = [NSString stringWithFormat:@"update Users set username='%@', email='%@', todo='%@', phone='%@', facebook='%@' where name='%@'", self.currentUser.username, self.currentUser.email, self.currentUser.todo, self.currentUser.phone, self.currentUser.facebook, self.currentUser.name];
-            [self.dbManager executeQuery:queryUpdate];
-            
-            if (self.dbManager.updatedRows != 0) {
-                NSLog(@"Query executed and updated, affected rows = %d", self.dbManager.updatedRows);
-                NSString *query = [NSString stringWithFormat:@"select * from Users where name='%@'", self.currentUser.name];
-                self.queryResult = [[NSArray alloc] initWithArray:[self.dbManager loadDatafromDB:query]];
+    // check if input matches regular expression
+    if ([RX(namePattern) isMatch:[self.username text]] && [RX(emailPattern) isMatch:[self.email text]] && [RX(phonePattern) isMatch:[self.phone text]]) {
+        if (self.currentUser.name.length != 0) {
+            // if user logged into sqlite3 database we have to check textfields validation
+            if (self.username.text.length != 0 && self.email.text.length != 0 && self.something.text.length != 0) {
+                // store data in database manager
+                
+                NSString *queryUpdate = [NSString stringWithFormat:@"update Users set username='%@', email='%@', todo='%@', phone='%@', facebook='%@' where name='%@'", self.currentUser.username, self.currentUser.email, self.currentUser.todo, self.currentUser.phone, self.currentUser.facebook, self.currentUser.name];
+                [self.dbManager executeQuery:queryUpdate];
+                
+                if (self.dbManager.updatedRows != 0) {
+                    NSLog(@"Query executed and updated, affected rows = %d", self.dbManager.updatedRows);
+                    NSString *query = [NSString stringWithFormat:@"select * from Users where name='%@'", self.currentUser.name];
+                    self.queryResult = [[NSArray alloc] initWithArray:[self.dbManager loadDatafromDB:query]];
+                } else {
+                    NSLog(@"query failed to execute.");
+                }
+                [self.navigationController popViewControllerAnimated:YES];
             } else {
-                NSLog(@"query failed to execute.");
+                // alert message that textfields cannot be empty
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Watch out!" message:@"name, email, your things are mandatory" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action1){}];
+                [alert addAction:action];
+                [self presentViewController:alert animated:YES completion:nil];
             }
-            [self.navigationController popViewControllerAnimated:YES];
             
         } else {
-            // alert message that textfields cannot be empty
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Watch out!" message:@"name, email, your things are mandatory" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action1){}];
-            [alert addAction:action];
-            [self presentViewController:alert animated:YES completion:nil];
+            // user didn't login to sqlite3
+            [self.myDelegate sendBackUserData:self.currentUser withImage:self.currentImage];
+            [self.navigationController popViewControllerAnimated:YES];
         }
-        
     } else {
-        // user didn't login to sqlite3
-        [self.myDelegate sendBackUserData:self.currentUser];
-        [self.navigationController popViewControllerAnimated:YES];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid input" message:@"retype textfields" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action1){}];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -176,7 +232,7 @@
     }
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet/*<UITouch *>*/ *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
