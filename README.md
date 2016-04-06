@@ -1,7 +1,7 @@
 # HangOutTinder
 Playing around with Objective-C, understanding Obj-C syntax and semantics by making a simple user interacting app.
 
-ps. iOS Programming class project. 
+
 
 ## Purpose 
 By using this app, users are allowed to find other app users around you in 1 kilometer. Users will then decide if they want to do anything with new friends, by filling out simple form in the app, users will be able to reach each other.
